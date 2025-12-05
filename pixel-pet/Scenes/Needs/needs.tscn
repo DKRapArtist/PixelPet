@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=3 uid="uid://wnf1nmurgr6m"]
+
+[ext_resource type="Script" uid="uid://dnchj5p5oh5xt" path="res://Scripts/Needs/Needs.gd" id="1_ssouu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjopt"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_adijg"]
+bg_color = Color(0.504739, 0, 0.15861964, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugvf3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oapvn"]
+bg_color = Color(0, 0.62750447, 0.98852485, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssouu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdikv"]
+bg_color = Color(0.9999997, 0.24210754, 0.6634805, 1)
+
+[node name="Needs" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 2.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ssouu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_top = 549.0
+offset_right = 360.0
+offset_bottom = 639.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_right = 94.0
+offset_bottom = 77.0
+
+[node name="Hunger" type="HBoxContainer" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HungerLabel" type="Label" parent="CanvasLayer/Panel/VBoxContainer/Hunger"]
+layout_mode = 2
+text = "Hunger"
+
+[node name="HungerBar" type="ProgressBar" parent="CanvasLayer/Panel/VBoxContainer/Hunger"]
+custom_minimum_size = Vector2(220, 18)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_jjopt")
+theme_override_styles/fill = SubResource("StyleBoxFlat_adijg")
+value = 100.0
+show_percentage = false
+
+[node name="Thirst" type="HBoxContainer" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ThirstLabel" type="Label" parent="CanvasLayer/Panel/VBoxContainer/Thirst"]
+layout_mode = 2
+text = "Thirst"
+
+[node name="ThirstBar" type="ProgressBar" parent="CanvasLayer/Panel/VBoxContainer/Thirst"]
+custom_minimum_size = Vector2(220, 18)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ugvf3")
+theme_override_styles/fill = SubResource("StyleBoxFlat_oapvn")
+value = 100.0
+show_percentage = false
+
+[node name="Affection" type="HBoxContainer" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="AffectionLabel" type="Label" parent="CanvasLayer/Panel/VBoxContainer/Affection"]
+layout_mode = 2
+text = "Affection"
+
+[node name="AffectionBar" type="ProgressBar" parent="CanvasLayer/Panel/VBoxContainer/Affection"]
+custom_minimum_size = Vector2(220, 18)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ssouu")
+theme_override_styles/fill = SubResource("StyleBoxFlat_tdikv")
+value = 100.0
+show_percentage = false

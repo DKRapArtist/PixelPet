@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://cenp4dt6ewa1h"]
+
+[ext_resource type="Texture2D" uid="uid://duhlcuqd28v3v" path="res://Assets/Sprite/PuppyIdeSpriteSheet.png" id="1_llq3g"]
+[ext_resource type="Script" uid="uid://do0pg1uk7w1xy" path="res://Scripts/Pet Scripts/BasePet.gd" id="2_i2egf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2egf"]
+atlas = ExtResource("1_llq3g")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1y536"]
+atlas = ExtResource("1_llq3g")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sb3bb"]
+atlas = ExtResource("1_llq3g")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxgpk"]
+atlas = ExtResource("1_llq3g")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o24uy"]
+atlas = ExtResource("1_llq3g")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfvh6"]
+atlas = ExtResource("1_llq3g")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsouq"]
+atlas = ExtResource("1_llq3g")
+region = Rect2(320, 320, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uuo4s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2egf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1y536")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sb3bb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxgpk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o24uy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfvh6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsouq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="Puppy" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_uuo4s")
+autoplay = "default"
+frame_progress = 0.18115026
+script = ExtResource("2_i2egf")
