@@ -8,6 +8,7 @@ class_name BasePet
 
 @onready var area: Area2D = $Area2D
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var love_hearts: GPUParticles2D = $LoveHearts
 
 func _ready() -> void:
 	area.input_event.connect(_on_area_input_event)
@@ -44,6 +45,11 @@ func use_item(item_type: String) -> void:
 func on_clicked() -> void:
 	if sprite.animation != "Happy" and sprite.sprite_frames.has_animation("Happy"):
 		sprite.play("Happy")
+
+	# Show hearts
+	if love_hearts:
+		love_hearts.restart()
+		love_hearts.emitting = true
 
 func _on_area_input_event(_viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:

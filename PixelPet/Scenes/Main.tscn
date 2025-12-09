@@ -15,6 +15,7 @@ script = ExtResource("1_vy5pj")
 default_pet_scene = ExtResource("9_vy5pj")
 
 [node name="Background" type="Control" parent="."]
+z_index = -2
 layout_mode = 3
 anchors_preset = 0
 offset_left = -1.0

@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://c0mdf1roqguxo"]
+[gd_scene load_steps=23 format=3 uid="uid://c0mdf1roqguxo"]
 
 [ext_resource type="Script" uid="uid://do0pg1uk7w1xy" path="res://Scripts/Pet Scripts/BasePet.gd" id="1_d0lke"]
 [ext_resource type="Texture2D" uid="uid://elhg8840d10" path="res://Assets/Sprite/KittyIdleSpriteSheet.png" id="2_5vh5t"]
 [ext_resource type="Texture2D" uid="uid://bu2g5dm47r1ku" path="res://Assets/Sprite/KittyPatSpriteSheet.png" id="2_pb70f"]
+[ext_resource type="PackedScene" uid="uid://b4e4f2b5a8ove" path="res://Scenes/VFX/LoveHearts.tscn" id="4_pb70f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qbnc6"]
 atlas = ExtResource("2_pb70f")
@@ -146,5 +147,7 @@ autoplay = "Idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(11.5, -15)
 shape = SubResource("RectangleShape2D_d0lke")
+
+[node name="LoveHearts" parent="." instance=ExtResource("4_pb70f")]
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_anim_finished"]
