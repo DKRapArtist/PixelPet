@@ -9,6 +9,7 @@ func _ready() -> void:
 	for i in 4:
 		var p := AudioStreamPlayer.new()
 		add_child(p)
+		p.finished.connect(func(): p.stop())
 		players.append(p)
 
 	# Load sounds (change paths to your files) (give id in buttons inspector, match id here eg PuppySFX etc)
@@ -19,12 +20,19 @@ func _ready() -> void:
 func play(sfx_name: String) -> void:
 	if not sounds.has(sfx_name):
 		return
-	var stream: AudioStream = sounds[sfx_name] as AudioStream
+
+	var stream = sounds[sfx_name]
 	if stream == null:
 		return
 
 	for p in players:
-		if not p.playing:
+		if !p.playing:
 			p.stream = stream
 			p.play()
 			return
+
+	# ✅ fallback: reuse first player
+	var p := players[0]
+	p.stop()
+	p.stream = stream
+	p.play()

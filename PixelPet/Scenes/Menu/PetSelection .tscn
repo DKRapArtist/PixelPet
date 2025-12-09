@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://qp8l35cypln4" path="res://Scripts/Menu Scripts/PetSelection.gd" id="1_8xvmo"]
 [ext_resource type="FontFile" uid="uid://bug7cx68wokq8" path="res://Assets/Fonts/Poppins-Regular.ttf" id="3_k5pg1"]
-[ext_resource type="Texture2D" uid="uid://ochu4hja7b0h" path="res://Assets/Panels/Menu Panel.png" id="4_1fowe"]
+[ext_resource type="Texture2D" uid="uid://ochu4hja7b0h" path="res://Assets/Buttons/Menu Panel.png" id="4_1fowe"]
 [ext_resource type="Texture2D" uid="uid://dtoqeah6n1jck" path="res://Assets/Still Pixels/Pixel Puppy.png" id="5_1fowe"]
 [ext_resource type="Texture2D" uid="uid://csr6ilfb1j8do" path="res://Assets/Still Pixels/Kitty.png" id="5_piww7"]
 [ext_resource type="Script" uid="uid://bthbns7rxsa5x" path="res://Scripts/Menu Scripts/PetButton.gd" id="6_0e4fu"]
-[ext_resource type="Texture2D" uid="uid://c26pntlg2l1q3" path="res://Assets/Panels/Confirm Button.png" id="6_piww7"]
+[ext_resource type="Texture2D" uid="uid://c26pntlg2l1q3" path="res://Assets/Buttons/Confirm Button.png" id="6_piww7"]
 [ext_resource type="PackedScene" uid="uid://bkv8el7cjfuay" path="res://Scenes/Pet Scenes/PuppyPet.tscn" id="8_0e4fu"]
 [ext_resource type="Texture2D" uid="uid://duhlcuqd28v3v" path="res://Assets/Sprite/PuppyIdeSpriteSheet.png" id="9_66fjo"]
 
