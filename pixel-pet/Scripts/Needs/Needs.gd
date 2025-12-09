@@ -9,20 +9,13 @@ var pet: BasePet = null
 
 func _process(_delta: float) -> void:
 	var main := get_tree().current_scene
-
-	# Make sure current scene is your Main.gd scene
-	if main == null or not (main is Node2D):
+	if main == null or !"pet" in main:
 		return
 
-	# Access the `pet` variable defined in Main.gd
-	if "pet" in main:
-		pet = main.pet as BasePet
-	else:
-		return
-
+	pet = main.pet as BasePet
 	if pet == null:
 		return
 
-	hunger_bar.value = pet.hunger
-	thirst_bar.value = pet.thirst
+	hunger_bar.value = PetStatsGlobal.hunger
+	thirst_bar.value = PetStatsGlobal.thirst
 	love_bar.value = pet.love
