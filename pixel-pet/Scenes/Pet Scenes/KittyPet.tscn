@@ -1,7 +1,40 @@
-[gd_scene load_steps=12 format=3 uid="uid://c0mdf1roqguxo"]
+[gd_scene load_steps=22 format=3 uid="uid://c0mdf1roqguxo"]
 
 [ext_resource type="Script" uid="uid://do0pg1uk7w1xy" path="res://Scripts/Pet Scripts/BasePet.gd" id="1_d0lke"]
 [ext_resource type="Texture2D" uid="uid://elhg8840d10" path="res://Assets/Sprite/KittyIdleSpriteSheet.png" id="2_5vh5t"]
+[ext_resource type="Texture2D" uid="uid://bu2g5dm47r1ku" path="res://Assets/Sprite/KittyPatSpriteSheet.png" id="2_pb70f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbnc6"]
+atlas = ExtResource("2_pb70f")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3w81"]
+atlas = ExtResource("2_pb70f")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjn24"]
+atlas = ExtResource("2_pb70f")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ykx"]
+atlas = ExtResource("2_pb70f")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kx2he"]
+atlas = ExtResource("2_pb70f")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03imn"]
+atlas = ExtResource("2_pb70f")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kph06"]
+atlas = ExtResource("2_pb70f")
+region = Rect2(320, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3leb"]
+atlas = ExtResource("2_pb70f")
+region = Rect2(640, 320, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pb70f"]
 atlas = ExtResource("2_5vh5t")
@@ -39,6 +72,35 @@ region = Rect2(640, 320, 320, 320)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_qbnc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3w81")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjn24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ykx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kx2he")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03imn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kph06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3leb")
+}],
+"loop": false,
+"name": &"Happy",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_pb70f")
 }, {
 "duration": 1.0,
@@ -63,9 +125,12 @@ animations = [{
 "texture": SubResource("AtlasTexture_uh6f1")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Idle",
 "speed": 9.0
 }]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0lke"]
+size = Vector2(237, 298)
 
 [node name="Kitty" type="Node2D"]
 script = ExtResource("1_d0lke")
@@ -73,4 +138,11 @@ pet_id = "Kitty"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qbnc6")
-autoplay = "default"
+animation = &"Happy"
+autoplay = "Idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(11.5, -15)
+shape = SubResource("RectangleShape2D_d0lke")

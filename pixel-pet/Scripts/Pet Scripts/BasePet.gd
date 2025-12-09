@@ -3,11 +3,16 @@ class_name BasePet
 
 @export var love: float = 0.0
 @export var pet_id: String = ""
-
 @export var hunger_drain_rate: float = 2.0
 @export var thirst_drain_rate: float = 2.0
 
+@onready var area: Area2D = $Area2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+
 func _ready() -> void:
+	print("PET READY")
+	area.input_event.connect(_on_area_input_event)
+	set_process(true)
 	# Load stored love if exists
 	if pet_id in PetStatsGlobal.love_by_pet:
 		love = PetStatsGlobal.love_by_pet[pet_id]
@@ -24,14 +29,6 @@ func _process(delta: float) -> void:
 	love = clamp(love, 0.0, 100.0)
 	PetStatsGlobal.love_by_pet[pet_id] = love  # keep global copy updated
 
-# Accept dragged data
-func _can_drop_data(_pos: Vector2, data: Variant) -> bool:
-	return typeof(data) == TYPE_DICTIONARY and data.has("type")
-
-# Handle dropped item
-func _drop_data(_pos: Vector2, data: Variant) -> void:
-	use_item(data["type"])
-
 func use_item(item_type: String) -> void:
 	match item_type:
 		"food":
@@ -40,3 +37,22 @@ func use_item(item_type: String) -> void:
 			PetStatsGlobal.thirst = clamp(PetStatsGlobal.thirst + 20.0, 0.0, 100.0)
 		"treat":
 			love = clamp(love + 15.0, 0.0, 100.0)
+
+func on_clicked() -> void:
+	if sprite.sprite_frames.has_animation("Happy"):
+		sprite.play("Happy")
+
+func _on_area_input_event(_viewport, event: InputEvent, _shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		print("PET CLICKED")
+		print("Selected item:", SelectedItemGlobal.selected_item_type)
+
+		if SelectedItemGlobal.selected_item_type != "":
+			use_item(SelectedItemGlobal.selected_item_type)
+			SelectedItemGlobal.selected_item_type = ""
+
+		on_clicked()
+
+func _on_anim_finished(anim_name: String) -> void:
+	if anim_name == "Happy" and sprite.sprite_frames.has_animation("Idle"):
+		sprite.play("Idle")

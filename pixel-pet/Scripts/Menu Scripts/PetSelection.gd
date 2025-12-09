@@ -17,6 +17,7 @@ func _on_pet_button_pressed(button: TextureButton) -> void:
 	selected_button.modulate = Color(1.2, 1.2, 1.2)  # simple highlight
 
 func _on_confirm_button_pressed() -> void:
+	SfxManagerGlobal.play("ButtonClick")
 	if selected_button == null:
 		return  # nothing chosen yet
 

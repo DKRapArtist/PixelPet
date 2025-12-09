@@ -22,6 +22,8 @@ config/icon="uid://csdivlfl1u3gv"
 PetSelectionGlobal="*res://Scripts/Global/PetSelectionGlobal.gd"
 PetStatsGlobal="*res://Scripts/Global/PetStatsGlobal.gd"
 MusicManagerGlobal="*res://Scripts/Global/MusicManagerGlobal.gd"
+SfxManagerGlobal="*res://Scripts/Global/SfxManagerGlobal.gd"
+SelectedItemGlobal="*res://Scripts/Global/SelectedItemGlobal.gd"
 
 [display]
 

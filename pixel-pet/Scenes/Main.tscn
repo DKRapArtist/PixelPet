@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cjx5bwa1l1sl"]
+[gd_scene load_steps=10 format=3 uid="uid://cjx5bwa1l1sl"]
 
 [ext_resource type="Texture2D" uid="uid://wjbjwe7x8rsy" path="res://Assets/Backgrounds/Pixel Pet BackgroundV2.png" id="1_b3i5h"]
 [ext_resource type="Script" uid="uid://dj6j6e8l5qffs" path="res://Scripts/Main.gd" id="1_vy5pj"]
@@ -7,11 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://d3kyln8l0mmdn" path="res://Assets/Backgrounds/Extended WallpaperV2.png" id="3_0tf6y"]
 [ext_resource type="Texture2D" uid="uid://cauiucu3ntp6v" path="res://Assets/Still Pixels/Water Bowl.png" id="4_pl8e4"]
 [ext_resource type="PackedScene" uid="uid://wnf1nmurgr6m" path="res://Scenes/Needs/needs.tscn" id="7_is6ib"]
-[ext_resource type="Script" uid="uid://cyp08ikdrlgve" path="res://Scripts/Drag & Drop/DropZone.gd" id="8_b3i5h"]
 [ext_resource type="PackedScene" uid="uid://bkv8el7cjfuay" path="res://Scenes/Pet Scenes/PuppyPet.tscn" id="9_vy5pj"]
 [ext_resource type="Texture2D" uid="uid://dugcfwlsouvnf" path="res://Assets/Still Pixels/Radio.png" id="10_bmxlf"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tkdr5"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_vy5pj")
@@ -24,6 +21,7 @@ offset_left = -1.0
 offset_top = 54.0
 offset_right = 39.0
 offset_bottom = 94.0
+mouse_filter = 2
 
 [node name="GameBackground" type="TextureRect" parent="Background"]
 layout_mode = 1
@@ -77,19 +75,10 @@ offset_left = 6.0
 offset_top = -75.0
 offset_right = 6.0
 offset_bottom = -75.0
-
-[node name="DropZone" type="Panel" parent="."]
-offset_left = 44.0
-offset_top = 268.0
-offset_right = 281.0
-offset_bottom = 515.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_tkdr5")
-script = ExtResource("8_b3i5h")
+mouse_filter = 2
 
 [node name="BasePetSpawn" type="Marker2D" parent="."]
 position = Vector2(171, 427)
-
-[node name="Puppy" parent="." instance=ExtResource("9_vy5pj")]
 
 [node name="Radio" type="TextureButton" parent="."]
 offset_left = 287.0
