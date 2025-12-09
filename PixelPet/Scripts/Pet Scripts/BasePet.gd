@@ -48,11 +48,15 @@ func on_clicked() -> void:
 func _on_area_input_event(_viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print("PET CLICKED")
-		print("Selected item:", SelectedItemGlobal.selected_item_type)
+		print("Selected item before feed:", SelectedItemGlobal.selected_item_type)
 
+		# ✅ FEED FIRST
 		if SelectedItemGlobal.selected_item_type != "":
 			use_item(SelectedItemGlobal.selected_item_type)
-			SelectedItemGlobal.selected_item_type = ""
+			print("USED ITEM:", SelectedItemGlobal.selected_item_type)
+
+			# ✅ CLEAR AFTER FEEDING
+			SelectedItemGlobal.clear()
 
 		on_clicked()
 
