@@ -10,6 +10,7 @@ func _ready() -> void:
 	tracks.append(load("res://Assets/PixelPet Music/Pixel Pet Theme 1.wav"))
 	tracks.append(load("res://Assets/PixelPet Music/Pixel Pet Theme 2.wav"))
 	tracks.append(load("res://Assets/PixelPet Music/Pixel Pet Theme 3.wav"))
+	tracks.append(load("res://Assets/PixelPet Music/Pixel Pet Theme 4.wav"))
 	# add more lines for more songs
 
 	print("MusicManager tracks size:", tracks.size())
