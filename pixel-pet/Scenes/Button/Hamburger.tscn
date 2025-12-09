@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://byq8goilaaipr"]
 
-[ext_resource type="Texture2D" uid="uid://bei8aeg63ilrl" path="res://Assets/Still Pixels/HamburgerButton.png" id="1_511co"]
-[ext_resource type="Script" uid="uid://dwik7het443b4" path="res://Scripts/MenuButton.gd" id="1_t1vv3"]
-[ext_resource type="Texture2D" uid="uid://dr5hp88ueg61a" path="res://Assets/Panels/SidePanel.png" id="2_ewwok"]
+[ext_resource type="Script" uid="uid://dwik7het443b4" path="res://Scripts/Menu Scripts/MenuButton.gd" id="1_t1vv3"]
 [ext_resource type="Texture2D" uid="uid://ck1q5ey2u6ghx" path="res://Assets/Still Pixels/Steak.png" id="2_np6qo"]
+[ext_resource type="Texture2D" uid="uid://yysregrrv1b3" path="res://Assets/Still Pixels/Hamburger ButtonV2.png" id="3_3i6nh"]
 [ext_resource type="Texture2D" uid="uid://b6vjfnu13cto8" path="res://Assets/Still Pixels/WaterDrop.png" id="3_klego"]
 [ext_resource type="Texture2D" uid="uid://bi5recotk4oog" path="res://Assets/Still Pixels/Bone.png" id="4_b42fe"]
 [ext_resource type="Script" uid="uid://v7mmdkpa0ex0" path="res://Scripts/Drag & Drop/FoodIcon.gd" id="5_7eamf"]
 [ext_resource type="Script" uid="uid://80rdw8sk6xpu" path="res://Scripts/Drag & Drop/TreatIcon.gd" id="7_3i6nh"]
+[ext_resource type="Texture2D" uid="uid://cqilv60in80rr" path="res://Assets/Panels/BrownSidePanel.png" id="9_3i6nh"]
 [ext_resource type="Script" uid="uid://ct2vev5ilyjrn" path="res://Scripts/Drag & Drop/WaterIcon.gd" id="9_jrvdt"]
 
 [node name="Hamburger" type="Control"]
@@ -19,50 +19,50 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t1vv3")
 
-[node name="PinkSidePanel" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(318, 210)
-texture = ExtResource("2_ewwok")
-
 [node name="MenuButton" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 290.0
 offset_top = 8.0
 offset_right = 363.0
 offset_bottom = 80.0
-texture_normal = ExtResource("1_511co")
+texture_normal = ExtResource("3_3i6nh")
+
+[node name="BrownPanel" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 557.0
+offset_right = 341.0
+offset_bottom = 637.0
+texture = ExtResource("9_3i6nh")
 
 [node name="Food" type="TextureRect" parent="."]
-visible = false
 texture_filter = 1
 layout_mode = 0
-offset_left = 302.0
-offset_top = 93.0
-offset_right = 342.0
-offset_bottom = 132.99998
+offset_left = 70.0
+offset_top = 581.0
+offset_right = 110.0
+offset_bottom = 619.0
 texture = ExtResource("2_np6qo")
 script = ExtResource("5_7eamf")
 
-[node name="Treat" type="TextureRect" parent="."]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_left = 300.0
-offset_top = 199.0
-offset_right = 340.0
-offset_bottom = 239.0
-texture = ExtResource("4_b42fe")
-script = ExtResource("7_3i6nh")
-
 [node name="Drink" type="TextureRect" parent="."]
-visible = false
 texture_filter = 1
 layout_mode = 0
-offset_left = 300.0
-offset_top = 145.0
-offset_right = 340.0
-offset_bottom = 185.0
+offset_left = 128.0
+offset_top = 581.0
+offset_right = 168.0
+offset_bottom = 621.0
 texture = ExtResource("3_klego")
 script = ExtResource("9_jrvdt")
+
+[node name="Treat" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 189.0
+offset_top = 581.0
+offset_right = 229.0
+offset_bottom = 621.0
+texture = ExtResource("4_b42fe")
+script = ExtResource("7_3i6nh")
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

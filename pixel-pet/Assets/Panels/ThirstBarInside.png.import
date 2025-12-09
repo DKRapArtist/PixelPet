@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4w6s2rym537x"
-path="res://.godot/imported/lPuppyPatSpriteSheet.png-f0c0b72c632547d8aef0286769aa1fa9.ctex"
+uid="uid://58n2e5oy7rw2"
+path="res://.godot/imported/ThirstBarInside.png-6664b12b4e4965f1916c4444735c9155.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/lPuppyPatSpriteSheet.png"
-dest_files=["res://.godot/imported/lPuppyPatSpriteSheet.png-f0c0b72c632547d8aef0286769aa1fa9.ctex"]
+source_file="res://Assets/Panels/ThirstBarInside.png"
+dest_files=["res://.godot/imported/ThirstBarInside.png-6664b12b4e4965f1916c4444735c9155.ctex"]
 
 [params]
 

@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://bkv8el7cjfuay"]
+
+[ext_resource type="Script" uid="uid://do0pg1uk7w1xy" path="res://Scripts/Pet Scripts/BasePet.gd" id="1_6fh87"]
+[ext_resource type="Texture2D" uid="uid://duhlcuqd28v3v" path="res://Assets/Sprite/PuppyIdeSpriteSheet.png" id="2_wjv3j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abg7e"]
+atlas = ExtResource("2_wjv3j")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7qt5"]
+atlas = ExtResource("2_wjv3j")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qnqa"]
+atlas = ExtResource("2_wjv3j")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ka4js"]
+atlas = ExtResource("2_wjv3j")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqe2e"]
+atlas = ExtResource("2_wjv3j")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wykt7"]
+atlas = ExtResource("2_wjv3j")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58e6l"]
+atlas = ExtResource("2_wjv3j")
+region = Rect2(320, 320, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fndc7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abg7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7qt5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qnqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ka4js")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqe2e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wykt7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58e6l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="Puppy" type="Node2D"]
+script = ExtResource("1_6fh87")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fndc7")
+autoplay = "default"

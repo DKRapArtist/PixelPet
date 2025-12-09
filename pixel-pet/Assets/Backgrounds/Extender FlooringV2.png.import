@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4w6s2rym537x"
-path="res://.godot/imported/lPuppyPatSpriteSheet.png-f0c0b72c632547d8aef0286769aa1fa9.ctex"
+uid="uid://ciqtiooqq7cy5"
+path="res://.godot/imported/Extender FlooringV2.png-7cb44cd3ee9bbc1687eebf2729a3e3bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/lPuppyPatSpriteSheet.png"
-dest_files=["res://.godot/imported/lPuppyPatSpriteSheet.png-f0c0b72c632547d8aef0286769aa1fa9.ctex"]
+source_file="res://Assets/Backgrounds/Extender FlooringV2.png"
+dest_files=["res://.godot/imported/Extender FlooringV2.png-7cb44cd3ee9bbc1687eebf2729a3e3bd.ctex"]
 
 [params]
 

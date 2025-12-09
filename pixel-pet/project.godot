@@ -17,10 +17,15 @@ boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="uid://dhdlxypjr6xr0"
 config/icon="uid://csdivlfl1u3gv"
 
+[autoload]
+
+PetSelectionGlobal="*res://Scripts/Global/PetSelectionGlobal.gd"
+
 [display]
 
 window/size/viewport_width=360
 window/size/viewport_height=640
+window/size/mode=1
 window/size/window_width_override=360
 window/size/window_height_override=640
 window/stretch/mode="canvas_items"

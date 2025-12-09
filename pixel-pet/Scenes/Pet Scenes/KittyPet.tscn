@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=3 uid="uid://c0mdf1roqguxo"]
+
+[ext_resource type="Script" uid="uid://do0pg1uk7w1xy" path="res://Scripts/Pet Scripts/BasePet.gd" id="1_d0lke"]
+[ext_resource type="Texture2D" uid="uid://elhg8840d10" path="res://Assets/Sprite/KittyIdleSpriteSheet.png" id="2_5vh5t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb70f"]
+atlas = ExtResource("2_5vh5t")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bws4a"]
+atlas = ExtResource("2_5vh5t")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxhji"]
+atlas = ExtResource("2_5vh5t")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgtne"]
+atlas = ExtResource("2_5vh5t")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfwi3"]
+atlas = ExtResource("2_5vh5t")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72c8q"]
+atlas = ExtResource("2_5vh5t")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3jth"]
+atlas = ExtResource("2_5vh5t")
+region = Rect2(320, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uh6f1"]
+atlas = ExtResource("2_5vh5t")
+region = Rect2(640, 320, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbnc6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pb70f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bws4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxhji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgtne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfwi3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72c8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3jth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uh6f1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
+
+[node name="Kitty" type="Node2D"]
+script = ExtResource("1_d0lke")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qbnc6")
+autoplay = "default"

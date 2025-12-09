@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4w6s2rym537x"
-path="res://.godot/imported/lPuppyPatSpriteSheet.png-f0c0b72c632547d8aef0286769aa1fa9.ctex"
+uid="uid://csr6ilfb1j8do"
+path="res://.godot/imported/Kitty.png-cbd4fa1392381dba3f0f29199eecf33d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprite/lPuppyPatSpriteSheet.png"
-dest_files=["res://.godot/imported/lPuppyPatSpriteSheet.png-f0c0b72c632547d8aef0286769aa1fa9.ctex"]
+source_file="res://Assets/Still Pixels/Kitty.png"
+dest_files=["res://.godot/imported/Kitty.png-cbd4fa1392381dba3f0f29199eecf33d.ctex"]
 
 [params]
 

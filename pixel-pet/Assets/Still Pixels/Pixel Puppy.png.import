@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dr5hp88ueg61a"
-path="res://.godot/imported/SidePanel.png-fa630e1385b03f735e53e28d9da9c0c1.ctex"
+uid="uid://dtoqeah6n1jck"
+path="res://.godot/imported/Pixel Puppy.png-c5f082e8ef71d0e9aa85f1a74eb2e98d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Panels/SidePanel.png"
-dest_files=["res://.godot/imported/SidePanel.png-fa630e1385b03f735e53e28d9da9c0c1.ctex"]
+source_file="res://Assets/Still Pixels/Pixel Puppy.png"
+dest_files=["res://.godot/imported/Pixel Puppy.png-c5f082e8ef71d0e9aa85f1a74eb2e98d.ctex"]
 
 [params]
 
