@@ -10,8 +10,11 @@ class_name BasePet
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
-	print("PET READY")
 	area.input_event.connect(_on_area_input_event)
+	
+	if sprite.sprite_frames.has_animation("Idle"):
+		sprite.play("Idle")   # ✅ ALWAYS start idle
+		
 	set_process(true)
 	# Load stored love if exists
 	if pet_id in PetStatsGlobal.love_by_pet:
@@ -39,7 +42,7 @@ func use_item(item_type: String) -> void:
 			love = clamp(love + 15.0, 0.0, 100.0)
 
 func on_clicked() -> void:
-	if sprite.sprite_frames.has_animation("Happy"):
+	if sprite.animation != "Happy" and sprite.sprite_frames.has_animation("Happy"):
 		sprite.play("Happy")
 
 func _on_area_input_event(_viewport, event: InputEvent, _shape_idx: int) -> void:
@@ -53,6 +56,6 @@ func _on_area_input_event(_viewport, event: InputEvent, _shape_idx: int) -> void
 
 		on_clicked()
 
-func _on_anim_finished(anim_name: String) -> void:
-	if anim_name == "Happy" and sprite.sprite_frames.has_animation("Idle"):
+func _on_anim_finished() -> void:
+	if sprite.sprite_frames.has_animation("Idle"):
 		sprite.play("Idle")
