@@ -11,8 +11,10 @@ func _ready() -> void:
 		add_child(p)
 		players.append(p)
 
-	# Load sounds (change paths to your files)
+	# Load sounds (change paths to your files) (give id in buttons inspector, match id here eg PuppySFX etc)
 	sounds["ButtonClick"] = load("res://Assets/PixelPet SFX/ButtonPressSFX.wav")
+	sounds["PuppySFX"] = load("res://Assets/PixelPet SFX/PetSFX/PuppySFX.wav")
+	sounds["KittySFX"] = load("res://Assets/PixelPet SFX/PetSFX/KittySFX.wav")
 
 func play(sfx_name: String) -> void:
 	if not sounds.has(sfx_name):

@@ -11,7 +11,7 @@ func _gui_input(event: InputEvent) -> void:
 
 func select() -> void:
 	is_selected = true
-	modulate = Color(1.3, 1.3, 1.3) # highlight (simple + clear)
+	modulate = Color(1.5, 1.5, 1.5) # highlight (simple + clear)
 
 	# ✅ SHOW ON CURSOR
 	CursorItemGlobal.show_item(texture)

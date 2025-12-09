@@ -151,6 +151,7 @@ scale = Vector2(0.08, 0.08)
 texture_normal = ExtResource("5_1fowe")
 script = ExtResource("6_0e4fu")
 pet_scene_path = "res://Scenes/Pet Scenes/PuppyPet.tscn"
+select_sound = "PuppySFX"
 
 [node name="Pet2" type="TextureRect" parent="PetOptions"]
 offset_left = 90.0
@@ -168,6 +169,7 @@ scale = Vector2(0.08, 0.08)
 texture_normal = ExtResource("5_piww7")
 script = ExtResource("6_0e4fu")
 pet_scene_path = "res://Scenes/Pet Scenes/KittyPet.tscn"
+select_sound = "KittySFX"
 
 [node name="Pet3" type="TextureRect" parent="PetOptions"]
 offset_left = 155.0
