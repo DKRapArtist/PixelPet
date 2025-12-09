@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cjx5bwa1l1sl"]
+[gd_scene load_steps=12 format=3 uid="uid://cjx5bwa1l1sl"]
 
 [ext_resource type="Texture2D" uid="uid://wjbjwe7x8rsy" path="res://Assets/Backgrounds/Pixel Pet BackgroundV2.png" id="1_b3i5h"]
 [ext_resource type="Script" uid="uid://dj6j6e8l5qffs" path="res://Scripts/Main.gd" id="1_vy5pj"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://wnf1nmurgr6m" path="res://Scenes/Needs/needs.tscn" id="7_is6ib"]
 [ext_resource type="Script" uid="uid://cyp08ikdrlgve" path="res://Scripts/Drag & Drop/DropZone.gd" id="8_b3i5h"]
 [ext_resource type="PackedScene" uid="uid://bkv8el7cjfuay" path="res://Scenes/Pet Scenes/PuppyPet.tscn" id="9_vy5pj"]
+[ext_resource type="Texture2D" uid="uid://dugcfwlsouvnf" path="res://Assets/Still Pixels/Radio.png" id="10_bmxlf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tkdr5"]
 
@@ -89,3 +90,12 @@ script = ExtResource("8_b3i5h")
 position = Vector2(171, 427)
 
 [node name="Puppy" parent="." instance=ExtResource("9_vy5pj")]
+
+[node name="Radio" type="TextureButton" parent="."]
+offset_left = 287.0
+offset_top = 149.0
+offset_right = 351.0
+offset_bottom = 213.0
+texture_normal = ExtResource("10_bmxlf")
+
+[connection signal="pressed" from="Radio" to="." method="_on_radio_pressed"]

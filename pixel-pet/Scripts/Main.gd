@@ -37,3 +37,6 @@ func spawn_pet(scene_to_use: PackedScene) -> void:
 
 	add_child(pet)
 	pet.global_position = pet_spawn_point.global_position
+
+func _on_radio_pressed() -> void:
+	MusicManagerGlobal.next_track()
