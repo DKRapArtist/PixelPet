@@ -5,7 +5,15 @@ extends Node2D
 var pet: BasePet
 @onready var pet_spawn_point: Node2D = $BasePetSpawn
 
+#day/night management
+@onready var day_time: Control = $DayTime
+@onready var night_time: Control = $NightTime
+
 func _ready() -> void:
+	#day/night
+	_update_day_night_visibility()
+	
+	MusicManagerGlobal.start_music_once()
 	var scene_to_use := default_pet_scene
 
 	if PetSelectionGlobal.selected_pet_scene_path != "":
@@ -29,3 +37,18 @@ func spawn_pet(scene_to_use: PackedScene) -> void:
 
 func _on_radio_pressed() -> void:
 	MusicManagerGlobal.next_track()
+
+#REAL TIME DAY / NIGHT MANAGEMENT
+func is_real_time_night() -> bool:
+	var t := Time.get_time_dict_from_system()  # {hour, minute, second}
+	return t.hour >= 18 or t.hour < 6  # night after 18:00 and before 06:00
+
+func _update_day_night_visibility() -> void:
+	var night := is_real_time_night()
+
+	if night:
+		day_time.visible = false
+		night_time.visible = true
+	else:
+		day_time.visible = true
+		night_time.visible = false

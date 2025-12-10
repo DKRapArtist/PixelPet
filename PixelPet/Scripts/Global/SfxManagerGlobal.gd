@@ -8,6 +8,7 @@ func _ready() -> void:
 	# Small pool of players so multiple sounds can overlap
 	for i in 4:
 		var p := AudioStreamPlayer.new()
+		p.bus = "SFX"
 		add_child(p)
 		p.finished.connect(func(): p.stop())
 		players.append(p)

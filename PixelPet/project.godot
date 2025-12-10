@@ -25,6 +25,7 @@ MusicManagerGlobal="*res://Scripts/Global/MusicManagerGlobal.gd"
 SfxManagerGlobal="*res://Scripts/Global/SfxManagerGlobal.gd"
 SelectedItemGlobal="*res://Scripts/Global/SelectedItemGlobal.gd"
 CursorItemGlobal="*res://Scenes/Global/CursorItemGlobal.tscn"
+SettingsGlobal="*res://Scripts/Global/Settings.gd"
 
 [display]
 
