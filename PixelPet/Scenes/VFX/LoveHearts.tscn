@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b4e4f2b5a8ove"]
 
-[ext_resource type="Texture2D" uid="uid://cunja2rarut34" path="res://Assets/Still Pixels/Heart.png" id="1_l1bb2"]
+[ext_resource type="Texture2D" uid="uid://cunja2rarut34" path="res://Assets/Still Pixels/Icons/Heart.png" id="1_l1bb2"]
 
 [sub_resource type="Curve" id="Curve_34k3f"]
 _data = [Vector2(0, 0.30337083), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.10112369), 0.0, 0.0, 0, 0]

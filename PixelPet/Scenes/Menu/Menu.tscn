@@ -1,10 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://by6d4rvhyjm5r"]
+[gd_scene load_steps=19 format=3 uid="uid://by6d4rvhyjm5r"]
 
 [ext_resource type="Script" uid="uid://bl6jcdl0q6ekt" path="res://Scripts/Menu Scripts/MainMenu.gd" id="1_h7084"]
 [ext_resource type="FontFile" uid="uid://bug7cx68wokq8" path="res://Assets/Fonts/Poppins-Regular.ttf" id="2_kulhe"]
 [ext_resource type="Texture2D" uid="uid://elhg8840d10" path="res://Assets/Sprite/KittyIdleSpriteSheet.png" id="4_h7084"]
 [ext_resource type="Texture2D" uid="uid://fynl3palr22c" path="res://Assets/Buttons/Pets Button.png" id="4_uw0ty"]
-[ext_resource type="Texture2D" uid="uid://bt14h402ktqfy" path="res://Assets/Buttons/Shop Button.png" id="5_ac4b6"]
 [ext_resource type="Texture2D" uid="uid://cs5p12nam8wdq" path="res://Assets/Buttons/Options Button.png" id="6_x2cqt"]
 [ext_resource type="Texture2D" uid="uid://bbbyohxwmgp8" path="res://Assets/Buttons/Back Button.png" id="7_5buhm"]
 
@@ -158,31 +157,22 @@ offset_right = 234.0
 offset_bottom = 232.0
 texture_normal = ExtResource("4_uw0ty")
 
-[node name="ShopButton" type="TextureButton" parent="."]
+[node name="OptionsButton" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 106.0
 offset_top = 270.0
 offset_right = 234.0
 offset_bottom = 302.0
-texture_normal = ExtResource("5_ac4b6")
-
-[node name="OptionsButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_left = 106.0
-offset_top = 340.0
-offset_right = 234.0
-offset_bottom = 372.0
 texture_normal = ExtResource("6_x2cqt")
 
 [node name="BackButton" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 106.0
-offset_top = 410.0
+offset_top = 340.0
 offset_right = 234.0
-offset_bottom = 442.0
+offset_bottom = 372.0
 texture_normal = ExtResource("7_5buhm")
 
 [connection signal="pressed" from="PetsButton" to="." method="_on_pets_button_pressed"]
-[connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

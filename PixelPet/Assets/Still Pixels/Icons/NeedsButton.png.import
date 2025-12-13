@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5c5kjqicsmpe"
-path="res://.godot/imported/NeedsButton.png-e3b2be665bbb068fd327b132b86b94fe.ctex"
+path="res://.godot/imported/NeedsButton.png-0e9f546e30b01f785dc15b254f70e564.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Still Pixels/NeedsButton.png"
-dest_files=["res://.godot/imported/NeedsButton.png-e3b2be665bbb068fd327b132b86b94fe.ctex"]
+source_file="res://Assets/Still Pixels/Icons/NeedsButton.png"
+dest_files=["res://.godot/imported/NeedsButton.png-0e9f546e30b01f785dc15b254f70e564.ctex"]
 
 [params]
 

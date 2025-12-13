@@ -9,13 +9,16 @@ var pet: BasePet = null
 
 func _process(_delta: float) -> void:
 	var main := get_tree().current_scene
-	if main == null or !"pet" in main:
+	if main == null:
 		return
 
-	pet = main.pet as BasePet
-	if pet == null:
+	if not ("pet" in main):
 		return
 
-	hunger_bar.value = PetStatsGlobal.hunger
-	thirst_bar.value = PetStatsGlobal.thirst
-	love_bar.value = pet.love
+	var current_pet := main.pet as BasePet
+	if current_pet == null or current_pet.stats == null:
+		return
+
+	hunger_bar.value = current_pet.stats.hunger
+	thirst_bar.value = current_pet.stats.thirst
+	love_bar.value = current_pet.love

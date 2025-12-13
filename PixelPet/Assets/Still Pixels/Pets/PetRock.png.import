@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi5recotk4oog"
-path="res://.godot/imported/Bone.png-3da62c0393cc0cbf43c22aa08acf1f42.ctex"
+uid="uid://bvu6y7i3fruor"
+path="res://.godot/imported/PetRock.png-817a66096bda8ae8d031f05a811b5c91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Still Pixels/Bone.png"
-dest_files=["res://.godot/imported/Bone.png-3da62c0393cc0cbf43c22aa08acf1f42.ctex"]
+source_file="res://Assets/Still Pixels/Pets/PetRock.png"
+dest_files=["res://.godot/imported/PetRock.png-817a66096bda8ae8d031f05a811b5c91.ctex"]
 
 [params]
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://c0mdf1roqguxo"]
+[gd_scene load_steps=24 format=3 uid="uid://c0mdf1roqguxo"]
 
 [ext_resource type="Script" uid="uid://do0pg1uk7w1xy" path="res://Scripts/Pet Scripts/BasePet.gd" id="1_d0lke"]
 [ext_resource type="Texture2D" uid="uid://elhg8840d10" path="res://Assets/Sprite/KittyIdleSpriteSheet.png" id="2_5vh5t"]
 [ext_resource type="Texture2D" uid="uid://bu2g5dm47r1ku" path="res://Assets/Sprite/KittyPatSpriteSheet.png" id="2_pb70f"]
 [ext_resource type="PackedScene" uid="uid://b4e4f2b5a8ove" path="res://Scenes/VFX/LoveHearts.tscn" id="4_pb70f"]
+[ext_resource type="Script" uid="uid://cok0jgvmw50u5" path="res://Scripts/Needs/PetStats.gd" id="5_bws4a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qbnc6"]
 atlas = ExtResource("2_pb70f")
@@ -151,5 +152,8 @@ shape = SubResource("RectangleShape2D_d0lke")
 [node name="LoveHearts" parent="." instance=ExtResource("4_pb70f")]
 z_index = -1
 position = Vector2(0, -51)
+
+[node name="PetStats" type="Node2D" parent="."]
+script = ExtResource("5_bws4a")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_anim_finished"]

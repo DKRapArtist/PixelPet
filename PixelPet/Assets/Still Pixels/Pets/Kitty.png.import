@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtoqeah6n1jck"
-path="res://.godot/imported/Pixel Puppy.png-c5f082e8ef71d0e9aa85f1a74eb2e98d.ctex"
+uid="uid://csr6ilfb1j8do"
+path="res://.godot/imported/Kitty.png-0bd6664d436461c33579a47897491e4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Still Pixels/Pixel Puppy.png"
-dest_files=["res://.godot/imported/Pixel Puppy.png-c5f082e8ef71d0e9aa85f1a74eb2e98d.ctex"]
+source_file="res://Assets/Still Pixels/Pets/Kitty.png"
+dest_files=["res://.godot/imported/Kitty.png-0bd6664d436461c33579a47897491e4a.ctex"]
 
 [params]
 

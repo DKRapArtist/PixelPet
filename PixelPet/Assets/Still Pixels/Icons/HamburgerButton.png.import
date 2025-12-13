@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck1q5ey2u6ghx"
-path="res://.godot/imported/Steak.png-cf7063a4ae4ea8a1ccc2d36b4f727708.ctex"
+uid="uid://bei8aeg63ilrl"
+path="res://.godot/imported/HamburgerButton.png-0ab9fec11fbc47094cbcddd4414ab340.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Still Pixels/Steak.png"
-dest_files=["res://.godot/imported/Steak.png-cf7063a4ae4ea8a1ccc2d36b4f727708.ctex"]
+source_file="res://Assets/Still Pixels/Icons/HamburgerButton.png"
+dest_files=["res://.godot/imported/HamburgerButton.png-0ab9fec11fbc47094cbcddd4414ab340.ctex"]
 
 [params]
 

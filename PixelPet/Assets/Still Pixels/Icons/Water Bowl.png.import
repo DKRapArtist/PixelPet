@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cunja2rarut34"
-path="res://.godot/imported/Heart.png-2f9d8870901c3c033d52ff04288da4df.ctex"
+uid="uid://cauiucu3ntp6v"
+path="res://.godot/imported/Water Bowl.png-fcf80c60aa23d898a50f3766982297d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Still Pixels/Heart.png"
-dest_files=["res://.godot/imported/Heart.png-2f9d8870901c3c033d52ff04288da4df.ctex"]
+source_file="res://Assets/Still Pixels/Icons/Water Bowl.png"
+dest_files=["res://.godot/imported/Water Bowl.png-fcf80c60aa23d898a50f3766982297d1.ctex"]
 
 [params]
 

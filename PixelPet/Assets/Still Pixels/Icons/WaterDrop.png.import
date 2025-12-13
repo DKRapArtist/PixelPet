@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cauiucu3ntp6v"
-path="res://.godot/imported/Water Bowl.png-5b3424000360a3df7e76911addc8c0d7.ctex"
+uid="uid://b6vjfnu13cto8"
+path="res://.godot/imported/WaterDrop.png-a2641cc59d909db198a97ebc3e795adb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Still Pixels/Water Bowl.png"
-dest_files=["res://.godot/imported/Water Bowl.png-5b3424000360a3df7e76911addc8c0d7.ctex"]
+source_file="res://Assets/Still Pixels/Icons/WaterDrop.png"
+dest_files=["res://.godot/imported/WaterDrop.png-a2641cc59d909db198a97ebc3e795adb.ctex"]
 
 [params]
 

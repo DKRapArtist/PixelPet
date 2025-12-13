@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yysregrrv1b3"
-path="res://.godot/imported/Hamburger ButtonV2.png-bc24657ea21a221882bab4964032327d.ctex"
+uid="uid://bnlk2ekgmgf71"
+path="res://.godot/imported/Buy Button.png-36b2ed93e02c8771f215046f818d202f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Still Pixels/Hamburger ButtonV2.png"
-dest_files=["res://.godot/imported/Hamburger ButtonV2.png-bc24657ea21a221882bab4964032327d.ctex"]
+source_file="res://Assets/Buttons/Buy Button.png"
+dest_files=["res://.godot/imported/Buy Button.png-36b2ed93e02c8771f215046f818d202f.ctex"]
 
 [params]
 

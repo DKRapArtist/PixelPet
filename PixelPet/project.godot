@@ -26,6 +26,9 @@ SfxManagerGlobal="*res://Scripts/Global/SfxManagerGlobal.gd"
 SelectedItemGlobal="*res://Scripts/Global/SelectedItemGlobal.gd"
 CursorItemGlobal="*res://Scenes/Global/CursorItemGlobal.tscn"
 SettingsGlobal="*res://Scripts/Global/Settings.gd"
+WalletGlobal="*res://Scripts/Global/WalletGlobal.gd"
+SaveSystemGlobal="*res://Scripts/Global/SaveSystemGlobal.gd"
+PetDatabaseGlobal="*res://Scripts/Global/PetDatabaseGlobal.gd"
 
 [display]
 

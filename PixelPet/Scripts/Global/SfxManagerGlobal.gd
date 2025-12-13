@@ -17,6 +17,9 @@ func _ready() -> void:
 	sounds["ButtonClick"] = load("res://Assets/PixelPet SFX/ButtonPressSFX.wav")
 	sounds["PuppySFX"] = load("res://Assets/PixelPet SFX/PetSFX/PuppySFX.wav")
 	sounds["KittySFX"] = load("res://Assets/PixelPet SFX/PetSFX/KittySFX.wav")
+	sounds["MouseSFX"] = load("res://Assets/PixelPet SFX/PetSFX/MouseSFX.wav")
+	sounds["RockSFX"] = load("res://Assets/PixelPet SFX/PetSFX/RockSFX.wav")
+	sounds["IceCubeSFX"] = load("res://Assets/PixelPet SFX/PetSFX/IceCubeSFX.wav")
 
 func play(sfx_name: String) -> void:
 	if not sounds.has(sfx_name):

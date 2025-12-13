@@ -10,11 +10,17 @@ var pet: BasePet
 @onready var night_time: Control = $NightTime
 
 func _ready() -> void:
-	#day/night
+	SaveSystemGlobal.load_game()
+	WalletGlobal.give_hourly_reward()
 	_update_day_night_visibility()
-	
+
 	MusicManagerGlobal.start_music_once()
+
 	var scene_to_use := default_pet_scene
+
+	# ✅ Restore last used pet via ID if needed
+	if PetSelectionGlobal.selected_pet_scene_path == "" and WalletGlobal.selected_pet_id != "":
+		PetSelectionGlobal.selected_pet_scene_path = PetDatabaseGlobal.get_scene_path(WalletGlobal.selected_pet_id)
 
 	if PetSelectionGlobal.selected_pet_scene_path != "":
 		var loaded := load(PetSelectionGlobal.selected_pet_scene_path)
@@ -32,8 +38,19 @@ func spawn_pet(scene_to_use: PackedScene) -> void:
 		pet.queue_free()
 
 	pet = scene_to_use.instantiate() as BasePet
-	add_child(pet)
+	add_child(pet)  # 👈 must be FIRST
 	pet.global_position = pet_spawn_point.global_position
+
+	pet.stats.apply_time_decay()  # 👈 now stats exists
+
+	# ✅ COMMIT last-used pet ID based on scene path
+	if PetSelectionGlobal.selected_pet_scene_path != "":
+		for pet_id in PetDatabaseGlobal.pets.keys():
+			if PetDatabaseGlobal.pets[pet_id] == PetSelectionGlobal.selected_pet_scene_path:
+				WalletGlobal.selected_pet_id = pet_id
+				break
+
+		SaveSystemGlobal.save_game()
 
 func _on_radio_pressed() -> void:
 	MusicManagerGlobal.next_track()

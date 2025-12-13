@@ -1,0 +1,131 @@
+[gd_scene load_steps=20 format=3 uid="uid://cxitvtetthujq"]
+
+[ext_resource type="Script" uid="uid://do0pg1uk7w1xy" path="res://Scripts/Pet Scripts/BasePet.gd" id="1_dxm7q"]
+[ext_resource type="Texture2D" uid="uid://djydctowrrjc8" path="res://Assets/Sprite/RockPatSpriteSheet.png" id="2_dxm7q"]
+[ext_resource type="Texture2D" uid="uid://dukci8rfsnlcr" path="res://Assets/Sprite/RockIdleSpriteSheet.png" id="3_8jwai"]
+[ext_resource type="PackedScene" uid="uid://b4e4f2b5a8ove" path="res://Scenes/VFX/LoveHearts.tscn" id="4_l3t5s"]
+[ext_resource type="Script" uid="uid://cok0jgvmw50u5" path="res://Scripts/Needs/PetStats.gd" id="5_7e4fq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjv3j"]
+size = Vector2(237, 298)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8twpu"]
+atlas = ExtResource("2_dxm7q")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3t5s"]
+atlas = ExtResource("2_dxm7q")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e4fq"]
+atlas = ExtResource("2_dxm7q")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7f6q"]
+atlas = ExtResource("2_dxm7q")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv64h"]
+atlas = ExtResource("2_dxm7q")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvh6o"]
+atlas = ExtResource("2_dxm7q")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxe8b"]
+atlas = ExtResource("3_8jwai")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qwtw"]
+atlas = ExtResource("3_8jwai")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d6f5"]
+atlas = ExtResource("3_8jwai")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3fa3"]
+atlas = ExtResource("3_8jwai")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1aa13"]
+atlas = ExtResource("3_8jwai")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f55w"]
+atlas = ExtResource("3_8jwai")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_urjor"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8twpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3t5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7e4fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7f6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lv64h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvh6o")
+}],
+"loop": false,
+"name": &"Happy",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxe8b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qwtw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d6f5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3fa3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1aa13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6f55w")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 7.0
+}]
+
+[node name="Rock" type="Node2D"]
+script = ExtResource("1_dxm7q")
+pet_id = "rock"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(11.5, -15)
+shape = SubResource("RectangleShape2D_wjv3j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_urjor")
+animation = &"Happy"
+autoplay = "Idle"
+
+[node name="LoveHearts" parent="." instance=ExtResource("4_l3t5s")]
+z_index = -1
+position = Vector2(-7, -90)
+
+[node name="PetStats" type="Node2D" parent="."]
+script = ExtResource("5_7e4fq")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_anim_finished"]

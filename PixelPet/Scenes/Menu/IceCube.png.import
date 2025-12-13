@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dugcfwlsouvnf"
-path="res://.godot/imported/Radio.png-4c1ca328e595cb912b447ce0d3327aa9.ctex"
+uid="uid://nuatjqrm1mtg"
+path="res://.godot/imported/IceCube.png-06013d0fe149aa93d2692e5e979d5b29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Still Pixels/Radio.png"
-dest_files=["res://.godot/imported/Radio.png-4c1ca328e595cb912b447ce0d3327aa9.ctex"]
+source_file="res://Scenes/Menu/IceCube.png"
+dest_files=["res://.godot/imported/IceCube.png-06013d0fe149aa93d2692e5e979d5b29.ctex"]
 
 [params]
 

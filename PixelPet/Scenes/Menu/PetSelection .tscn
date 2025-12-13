@@ -1,14 +1,17 @@
-[gd_scene load_steps=21 format=3 uid="uid://bci2dqfbvjauq"]
+[gd_scene load_steps=24 format=3 uid="uid://b4sxqgl8dsn0m"]
 
 [ext_resource type="Script" uid="uid://qp8l35cypln4" path="res://Scripts/Menu Scripts/PetSelection.gd" id="1_8xvmo"]
 [ext_resource type="FontFile" uid="uid://bug7cx68wokq8" path="res://Assets/Fonts/Poppins-Regular.ttf" id="3_k5pg1"]
 [ext_resource type="Texture2D" uid="uid://ochu4hja7b0h" path="res://Assets/Buttons/Menu Panel.png" id="4_1fowe"]
-[ext_resource type="Texture2D" uid="uid://dtoqeah6n1jck" path="res://Assets/Still Pixels/Pixel Puppy.png" id="5_1fowe"]
-[ext_resource type="Texture2D" uid="uid://csr6ilfb1j8do" path="res://Assets/Still Pixels/Kitty.png" id="5_piww7"]
+[ext_resource type="Texture2D" uid="uid://dtoqeah6n1jck" path="res://Assets/Still Pixels/Pets/Pixel Puppy.png" id="5_1fowe"]
+[ext_resource type="Texture2D" uid="uid://csr6ilfb1j8do" path="res://Assets/Still Pixels/Pets/Kitty.png" id="5_piww7"]
 [ext_resource type="Script" uid="uid://bthbns7rxsa5x" path="res://Scripts/Menu Scripts/PetButton.gd" id="6_0e4fu"]
 [ext_resource type="Texture2D" uid="uid://c26pntlg2l1q3" path="res://Assets/Buttons/Confirm Button.png" id="6_piww7"]
+[ext_resource type="Texture2D" uid="uid://b5txeb5eihp4v" path="res://Assets/Still Pixels/Pets/Mouse.png" id="7_o1dui"]
 [ext_resource type="PackedScene" uid="uid://bkv8el7cjfuay" path="res://Scenes/Pet Scenes/PuppyPet.tscn" id="8_0e4fu"]
+[ext_resource type="Texture2D" uid="uid://d2ogb8q82ergy" path="res://Assets/Still Pixels/Pets/IceCube.png" id="8_k50ws"]
 [ext_resource type="Texture2D" uid="uid://duhlcuqd28v3v" path="res://Assets/Sprite/PuppyIdeSpriteSheet.png" id="9_66fjo"]
+[ext_resource type="Texture2D" uid="uid://bvu6y7i3fruor" path="res://Assets/Still Pixels/Pets/PetRock.png" id="9_qyvgy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7hqe"]
 bg_color = Color(0.9529412, 0.8901961, 0.77254903, 1)
@@ -103,7 +106,7 @@ offset_bottom = -540.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8xvmo")
-pet_buttons = [NodePath("PetOptions/Puppy"), NodePath("PetOptions/Kitty")]
+pet_buttons = [NodePath("PetOptions/Puppy"), NodePath("PetOptions/Kitty"), NodePath("PetOptions/Pet3/Mouse"), NodePath("PetOptions/Pet4/IceCube"), NodePath("PetOptions/Pet5/Rock")]
 
 [node name="Header" type="Panel" parent="."]
 custom_minimum_size = Vector2(300, 100)
@@ -178,6 +181,18 @@ offset_right = 205.00003
 offset_bottom = 185.0
 texture = ExtResource("4_1fowe")
 
+[node name="Mouse" type="TextureButton" parent="PetOptions/Pet3"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 641.0
+offset_bottom = 638.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("7_o1dui")
+script = ExtResource("6_0e4fu")
+pet_scene_path = "res://Scenes/Pet Scenes/Mouse.tscn"
+select_sound = "MouseSFX"
+
 [node name="Pet4" type="TextureRect" parent="PetOptions"]
 offset_left = 220.0
 offset_top = 135.0
@@ -185,12 +200,36 @@ offset_right = 270.00003
 offset_bottom = 185.0
 texture = ExtResource("4_1fowe")
 
+[node name="IceCube" type="TextureButton" parent="PetOptions/Pet4"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -3.0
+offset_right = 638.0
+offset_bottom = 637.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("8_k50ws")
+script = ExtResource("6_0e4fu")
+pet_scene_path = "res://Scenes/Pet Scenes/IceCube.tscn"
+select_sound = "IceCubeSFX"
+
 [node name="Pet5" type="TextureRect" parent="PetOptions"]
 offset_left = 285.0
 offset_top = 135.0
 offset_right = 335.00003
 offset_bottom = 185.0
 texture = ExtResource("4_1fowe")
+
+[node name="Rock" type="TextureButton" parent="PetOptions/Pet5"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 638.0
+offset_bottom = 639.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("9_qyvgy")
+script = ExtResource("6_0e4fu")
+pet_scene_path = "res://Scenes/Pet Scenes/Rock.tscn"
+select_sound = "RockSFX"
 
 [node name="Pet6" type="TextureRect" parent="PetOptions"]
 offset_left = 25.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6vjfnu13cto8"
-path="res://.godot/imported/WaterDrop.png-555418d80585c5270cf502c15bc70874.ctex"
+uid="uid://cunja2rarut34"
+path="res://.godot/imported/Heart.png-fb9fd0d8e1262b3204cc21697b7f5513.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Still Pixels/WaterDrop.png"
-dest_files=["res://.godot/imported/WaterDrop.png-555418d80585c5270cf502c15bc70874.ctex"]
+source_file="res://Assets/Still Pixels/Icons/Heart.png"
+dest_files=["res://.godot/imported/Heart.png-fb9fd0d8e1262b3204cc21697b7f5513.ctex"]
 
 [params]
 

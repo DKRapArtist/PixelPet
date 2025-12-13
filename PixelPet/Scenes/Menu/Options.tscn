@@ -1,8 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://bbx0ysfrmijaq"]
+[gd_scene load_steps=27 format=3 uid="uid://bbx0ysfrmijaq"]
 
 [ext_resource type="Script" uid="uid://ch15wvis80f7f" path="res://Scripts/Menu Scripts/Options.gd" id="1_mobg2"]
 [ext_resource type="FontFile" uid="uid://bug7cx68wokq8" path="res://Assets/Fonts/Poppins-Regular.ttf" id="2_t564k"]
-[ext_resource type="Texture2D" uid="uid://elhg8840d10" path="res://Assets/Sprite/KittyIdleSpriteSheet.png" id="3_ifsxo"]
+[ext_resource type="Texture2D" uid="uid://dukci8rfsnlcr" path="res://Assets/Sprite/RockIdleSpriteSheet.png" id="3_5tqif"]
 [ext_resource type="Texture2D" uid="uid://bbbyohxwmgp8" path="res://Assets/Buttons/Back Button.png" id="4_4n2uo"]
 [ext_resource type="Texture2D" uid="uid://73xxrffo1o5g" path="res://Assets/Buttons/Master Text.png" id="5_ifsxo"]
 [ext_resource type="Texture2D" uid="uid://c2ie6ioupobk5" path="res://Assets/Buttons/Mute Music Button.png" id="5_t564k"]
@@ -33,68 +33,104 @@ border_width_right = 10
 border_width_bottom = 10
 border_color = Color(0.9490196, 0.8509804, 0.6666667, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uw0ty"]
-atlas = ExtResource("3_ifsxo")
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5uht"]
+atlas = ExtResource("3_5tqif")
 region = Rect2(0, 0, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ac4b6"]
-atlas = ExtResource("3_ifsxo")
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcd17"]
+atlas = ExtResource("3_5tqif")
 region = Rect2(320, 0, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x2cqt"]
-atlas = ExtResource("3_ifsxo")
+[sub_resource type="AtlasTexture" id="AtlasTexture_snkuo"]
+atlas = ExtResource("3_5tqif")
 region = Rect2(640, 0, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5buhm"]
-atlas = ExtResource("3_ifsxo")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2muop"]
+atlas = ExtResource("3_5tqif")
 region = Rect2(960, 0, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_et8ab"]
-atlas = ExtResource("3_ifsxo")
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7gpy"]
+atlas = ExtResource("3_5tqif")
 region = Rect2(1280, 0, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7fq4t"]
-atlas = ExtResource("3_ifsxo")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fe0n"]
+atlas = ExtResource("3_5tqif")
 region = Rect2(0, 320, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c61og"]
-atlas = ExtResource("3_ifsxo")
-region = Rect2(320, 320, 320, 320)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kqh14"]
-atlas = ExtResource("3_ifsxo")
-region = Rect2(640, 320, 320, 320)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ooplh"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ldwtj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uw0ty")
+"texture": SubResource("AtlasTexture_i5uht")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ac4b6")
+"texture": SubResource("AtlasTexture_wcd17")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x2cqt")
+"texture": SubResource("AtlasTexture_snkuo")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5buhm")
+"texture": SubResource("AtlasTexture_2muop")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_et8ab")
+"texture": SubResource("AtlasTexture_i7gpy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7fq4t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c61og")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kqh14")
+"texture": SubResource("AtlasTexture_1fe0n")
 }],
 "loop": true,
 "name": &"default",
-"speed": 9.0
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjfj6"]
+atlas = ExtResource("3_5tqif")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffki1"]
+atlas = ExtResource("3_5tqif")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rkqj"]
+atlas = ExtResource("3_5tqif")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rr8c"]
+atlas = ExtResource("3_5tqif")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vun8"]
+atlas = ExtResource("3_5tqif")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fmul"]
+atlas = ExtResource("3_5tqif")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eea2f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjfj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffki1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rkqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rr8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vun8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fmul")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
 }]
 
 [node name="Options" type="Control"]
@@ -142,14 +178,14 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_5dvr8")
 [node name="Kitty" type="AnimatedSprite2D" parent="."]
 position = Vector2(35, -1)
 scale = Vector2(0.3, 0.3)
-sprite_frames = SubResource("SpriteFrames_ooplh")
+sprite_frames = SubResource("SpriteFrames_ldwtj")
 autoplay = "default"
 flip_h = true
 
 [node name="Kitty2" type="AnimatedSprite2D" parent="."]
 position = Vector2(305, -1)
 scale = Vector2(0.3, 0.3)
-sprite_frames = SubResource("SpriteFrames_ooplh")
+sprite_frames = SubResource("SpriteFrames_eea2f")
 autoplay = "default"
 
 [node name="BackButton" type="TextureButton" parent="."]

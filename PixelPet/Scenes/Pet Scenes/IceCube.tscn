@@ -1,0 +1,131 @@
+[gd_scene load_steps=20 format=3 uid="uid://dfs248pjr2uva"]
+
+[ext_resource type="Script" uid="uid://do0pg1uk7w1xy" path="res://Scripts/Pet Scripts/BasePet.gd" id="1_p5yf2"]
+[ext_resource type="Texture2D" uid="uid://bk3n2b25qd6bt" path="res://Assets/Sprite/IceCubePatSpriteSheet.png" id="2_l2tik"]
+[ext_resource type="Texture2D" uid="uid://dw5shyrb5v6c7" path="res://Assets/Sprite/IceCubeIdleSpriteSheet.png" id="3_7nyn6"]
+[ext_resource type="PackedScene" uid="uid://b4e4f2b5a8ove" path="res://Scenes/VFX/LoveHearts.tscn" id="4_mwcb1"]
+[ext_resource type="Script" uid="uid://cok0jgvmw50u5" path="res://Scripts/Needs/PetStats.gd" id="5_l2tik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjv3j"]
+size = Vector2(237, 298)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlgh5"]
+atlas = ExtResource("2_l2tik")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvjin"]
+atlas = ExtResource("2_l2tik")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jg7df"]
+atlas = ExtResource("2_l2tik")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0ru6"]
+atlas = ExtResource("2_l2tik")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvrqd"]
+atlas = ExtResource("2_l2tik")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dgl8"]
+atlas = ExtResource("2_l2tik")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uios"]
+atlas = ExtResource("3_7nyn6")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnjnk"]
+atlas = ExtResource("3_7nyn6")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6n7qm"]
+atlas = ExtResource("3_7nyn6")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgrcx"]
+atlas = ExtResource("3_7nyn6")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4t3d"]
+atlas = ExtResource("3_7nyn6")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2j3kw"]
+atlas = ExtResource("3_7nyn6")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ty22n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlgh5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvjin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jg7df")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0ru6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvrqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dgl8")
+}],
+"loop": false,
+"name": &"Happy",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3uios")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnjnk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6n7qm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgrcx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4t3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2j3kw")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 7.0
+}]
+
+[node name="IceCube" type="Node2D"]
+script = ExtResource("1_p5yf2")
+pet_id = "icecube"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(11.5, -15)
+shape = SubResource("RectangleShape2D_wjv3j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ty22n")
+animation = &"Happy"
+autoplay = "Idle"
+
+[node name="LoveHearts" parent="." instance=ExtResource("4_mwcb1")]
+z_index = -1
+position = Vector2(-7, -90)
+
+[node name="PetStats" type="Node2D" parent="."]
+script = ExtResource("5_l2tik")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_anim_finished"]
