@@ -4,9 +4,6 @@ const SAVE_PATH := "user://save_game.json"
 
 func save_game() -> void:
 	var data: Dictionary = {
-		"coins": WalletGlobal.coins,
-		"last_reward_time": WalletGlobal.last_reward_time,
-		"bought_pets": WalletGlobal.bought_pets,
 		"selected_pet_id": WalletGlobal.selected_pet_id,
 		"love_by_pet": PetStatsGlobal.love_by_pet,
 	}
@@ -31,10 +28,5 @@ func load_game() -> void:
 		return
 
 	var dict := result as Dictionary
-	WalletGlobal.coins = int(dict.get("coins", 0))
-	WalletGlobal.last_reward_time = int(dict.get("last_reward_time", 0))
-	WalletGlobal.bought_pets = dict.get("bought_pets", {})
 	WalletGlobal.selected_pet_id = String(dict.get("selected_pet_id", ""))
-
 	PetStatsGlobal.love_by_pet = dict.get("love_by_pet", {})
-	

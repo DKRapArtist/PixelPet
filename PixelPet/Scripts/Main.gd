@@ -11,7 +11,6 @@ var pet: BasePet
 
 func _ready() -> void:
 	SaveSystemGlobal.load_game()
-	WalletGlobal.give_hourly_reward()
 	_update_day_night_visibility()
 
 	MusicManagerGlobal.start_music_once()

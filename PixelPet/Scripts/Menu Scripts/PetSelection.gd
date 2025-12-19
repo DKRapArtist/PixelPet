@@ -12,39 +12,32 @@ func _ready() -> void:
 	for b in pet_buttons:
 		b.pressed.connect(_on_pet_button_pressed.bind(b))
 
-		var owned = WalletGlobal.bought_pets.get(b.pet_id, false)
+		# All pets are usable – no bought_pets, no coins
+		b.disabled = false
+		b.modulate = Color.WHITE
 
-		if owned:
-			b.disabled = false
-			b.modulate = Color.WHITE
-		else:
-			b.disabled = true
-			b.modulate = Color(0.4, 0.4, 0.4)
-
-		# Restore last selected pet visually
-		if owned and b.pet_id == WalletGlobal.selected_pet_id:
+		if b.pet_id == WalletGlobal.selected_pet_id:
 			selected_button = b
 			b.modulate = Color(1.2, 1.2, 1.2)
 
 
 func _on_pet_button_pressed(button: PetSelectButton) -> void:
-	if button.disabled:
-		return
 	if not can_click:
 		return
 
 	can_click = false
 	_start_cooldown()
 
-	# Clear old highlight
 	if selected_button:
 		selected_button.modulate = Color.WHITE
 
-	# Select new
 	selected_button = button
-	selected_button.modulate = Color(1.5, 1.5, 1.5)
+	selected_button.modulate = Color(1.2, 1.2, 1.2)
 
-	# Play per-pet sound
+	# Save selected pet globally (optional)
+	WalletGlobal.selected_pet_id = button.pet_id
+	SaveSystemGlobal.save_game()
+
 	if button.select_sound != "":
 		SfxManagerGlobal.play(button.select_sound)
 
